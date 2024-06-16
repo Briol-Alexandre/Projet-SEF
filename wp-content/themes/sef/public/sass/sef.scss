@@ -1,0 +1,91 @@
+.sef__container {
+  .info {
+    display: flex;
+    margin: 4rem auto;
+    width: 80%;
+    justify-content: center;
+    gap: 5rem;
+
+    p {
+      font-family: Avenir, sans-serif;
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.actions {
+  font-family: Avenir, sans-serif;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+
+  b {
+    font-weight: 800;
+    margin: 1rem;
+  }
+
+  p {
+    font-weight: normal;
+    margin-bottom: 2rem;
+
+  }
+}
+
+.projects {
+  font-family: Avenir, sans-serif;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.2rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.temoignages {
+  font-family: Avenir, sans-serif;
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.2rem;
+
+
+  .post {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+
+    div {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      b {
+        font-weight: 800;
+      }
+
+      p {
+        margin-left: 0;
+        font-weight: normal;
+      }
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+
+    }
+  }
+}
+
+h2 {
+  font-family: "Big Caslon CC", serif;
+  text-align: center;
+  color: #327EC1;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}

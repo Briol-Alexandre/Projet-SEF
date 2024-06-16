@@ -1,0 +1,244 @@
+.main-nav {
+  font-family: $avenir-font;
+  background-color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 64, 255, 0.16) 0 7px 21px;
+  overflow: hidden;
+
+  .menu__button, #menu__toggle {
+    display: none
+  }
+
+  a.current_page {
+    font-weight: 900;
+    color: #78DEB7;
+  }
+
+  .menu__box {
+    margin-left: auto;
+    padding: 2.5625rem 5.125rem 2.5625rem;
+    gap: 3.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.25s;
+
+    li {
+      font-weight: 700;
+      transition: 0.25s;
+
+      :hover {
+        color: #78DEB7;
+        transition: 0.25s;
+      }
+    }
+
+    #contactButton {
+      color: white;
+      background-color: #78DEB7;
+      padding: 1rem 2rem;
+      border-radius: 24px;
+      transition: 0.25s;
+      margin-left: 5rem;
+    }
+
+    #contactButton:hover {
+      color: #78DEB7;
+      background-color: white;
+      border: #78DEB7 2px solid;
+      transition: .25s;
+    }
+  }
+
+  img {
+    margin-left: 1rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .burger_menu_icon {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (max-width: 1150px) {
+  .main-nav {
+    .menu__box {
+      #contactButton {
+        margin-left: 0;
+        transition: 0.25s;
+      }
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .main-nav {
+    .menu__box {
+      transition: 0.25s;
+      padding: 2.5625rem 1rem 2.5625rem 5.125rem;
+    }
+  }
+}
+
+
+@media (max-width: 1070px) {
+  .main-nav {
+    .burger_menu_icon {
+      display: inline-block;
+    }
+
+
+    .menu__button {
+      span {
+        display: block;
+        margin-bottom: 5px;
+        background-color: #78DEB7;
+        width: 30px;
+        min-height: 3px;
+        border-radius: 20px;
+        transition: 0.5s;
+      }
+
+      span:last-child {
+        margin-bottom: 0;
+
+      }
+    }
+
+    .menu__button, #menu__toggle {
+      display: inline-block;
+      font-size: 1.5rem;
+      width: 30px;
+    }
+
+    img {
+      width: 78px;
+      height: 78px;
+    }
+
+    #menu__toggle {
+      opacity: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+      visibility: visible;
+      right: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__button {
+      span:first-child {
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.5s;
+      }
+
+      span:nth-child(2) {
+        rotate: 180deg;
+        opacity: 0;
+      }
+
+      span:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.5s;
+      }
+    }
+
+    .hamburger-menu {
+      margin-left: auto;
+      margin-right: 2rem;
+      z-index: 100;
+    }
+
+    .menu__btn {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100%;
+
+      cursor: pointer;
+      z-index: 1;
+    }
+
+
+    .menu__box {
+      li {
+        display: flex;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: normal;
+      align-items: center;
+      position: absolute;
+      visibility: hidden;
+      top: 84.25px;
+      right: -100%;
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background-color: white;
+      transition-duration: 0.25s;
+      border-bottom: #78DEB7 .5px solid;
+      gap: 0;
+
+      #contactButton {
+        background-color: transparent;
+        padding: 2.875rem 1.5rem;
+        display: block;
+        text-align: center;
+        width: 75.75%;
+        color: black;
+        font-size: 1.5625rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition-duration: .25s;
+        border: none;
+      }
+
+      #contactButton:hover {
+        color: #78DEB7;
+        font-weight: 600;
+        border: none;
+      }
+    }
+
+    .menu__item {
+      display: block;
+      padding: 2.875rem 1.5rem;
+      text-align: center;
+      width: 75.75%;
+      color: black;
+      font-size: 1.5625rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition-duration: .25s;
+      border-bottom: #78DEB7 2px solid;
+    }
+
+    a.current_page {
+      color: #78DEB7;
+      font-weight: 900;
+    }
+
+    .menu__item:hover {
+      color: #78DEB7;
+    }
+
+
+  }
+}
+
+

@@ -1,0 +1,72 @@
+.stores__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Avenir, sans-serif;
+  margin-top: 5rem;
+
+  * {
+    text-align: center;
+  }
+
+  li {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #327EC1;
+    margin-bottom: 3rem;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  .store__container {
+    display: flex;
+    justify-content: space-around;
+    gap: 78px;
+  }
+
+  .store_name {
+    font-family: "Big Caslon CC", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #327EC1;
+    margin-bottom: 4rem;
+
+    b {
+      color: black;
+      font-style: italic;
+      text-transform: uppercase;
+      background-image: url(../../../../../wp-content/themes/sef/resources/img/text-bg.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    b {
+      font-family: "Big Caslon CC", serif;
+      color: #327EC1;
+      font-style: italic;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    b, i, p {
+      text-align: left;
+      display: block;
+      font-weight: 500;
+    }
+  }
+
+  .plan{
+    min-height: 300px;
+    width: 100%;
+    display: block;
+  }
+}

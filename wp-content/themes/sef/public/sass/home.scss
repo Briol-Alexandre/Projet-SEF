@@ -1,0 +1,127 @@
+.home_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  min-height: 100vh;
+}
+
+.link-to-other-pages {
+  font-family: Avenir, sans-serif;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: #78DEB7;
+  border-radius: 3.125rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.link-to-other-pages:hover {
+  color: #78DEB7;
+  background-color: transparent;
+  border: 2px #78DEB7 solid;
+  transition: 0.25s;
+  scale: 0.95;
+}
+
+.main_title {
+  font-family: "Big Caslon CC", serif;
+  font-weight: 900;
+  font-size: 3.75rem;
+  color: #327EC1;
+  text-align: center;
+}
+.main_title {
+  b {
+    color: black;
+    font-style: italic;
+    background-image: url(../../../../../wp-content/themes/sef/resources/img/text-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.recent_activities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .home_act_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3%;
+    margin-top: 5rem;
+    padding: 0 2rem;
+
+    li {
+      min-height: 100%;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1.25rem;
+        align-self: center;
+      }
+
+      p {
+        font-size: 2rem;
+        font-family: Avenir, sans-serif;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 2rem;
+        color: #327EC1;
+      }
+    }
+  }
+
+  .link-to-activities {
+    display: inline-block;
+    align-self: center;
+    font-family: Avenir, sans-serif;
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #78DEB7;
+    border-radius: 3.125rem;
+    margin-top: 5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.25s;
+    text-align: center;
+  }
+
+  .link-to-activities:hover {
+    color: #78DEB7;
+    background-color: transparent;
+    border: 2px #78DEB7 solid;
+    transition: 0.25s;
+    scale: 0.95;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  html{
+    font-size: 62.5%;
+  }
+
+  .recent_activities{
+    .home_act_list {
+      display: flex;
+      flex-direction: column;
+      .act_item{
+        margin-top: 2rem;
+      }
+    }
+  }
+}

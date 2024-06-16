@@ -1,0 +1,80 @@
+h1 {
+  margin-top: 5rem;
+}
+
+.form_container {
+  display: flex;
+  justify-content: center;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 5rem 0;
+    width: 50%;
+    font-family: Avenir, sans-serif;
+    border-radius: 15px;
+    margin-top: 4rem;
+
+    .name {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    .email {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    .message {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    #message {
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      background-color: rgba(120, 222, 183, 0.18);
+      padding: 1rem 0 1rem 1rem;
+      border: none;
+      font-family: Avenir, sans-serif;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+    }
+
+    .submit {
+      font-family: Avenir, inherit sans serif;
+      text-transform: uppercase;
+      background-color: #327EC1;
+      color: white;
+      padding: 1rem;
+      display: inline-block;
+      margin: auto;
+      border: none;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+
+    .submit:hover {
+      background-color: #78DEB7;
+      transition: 0.25s;
+    }
+
+  }
+}
