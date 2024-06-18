@@ -14,7 +14,7 @@ $big-calson-font: Big Calson CC, serif;
   border-width: 0;
 }
 
-.reveal{
+.reveal, .reveal-side{
   opacity: 1;
   transition: 1s;
 }
@@ -22,7 +22,11 @@ $big-calson-font: Big Calson CC, serif;
 .slideUp {
   opacity: 0;
   transform: translateY(100px);
-  transition: 1s;
+}
+
+.slideSide {
+  opacity: 0;
+  transform: translateX(100px);
 }
 
 .background {

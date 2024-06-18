@@ -4,6 +4,10 @@ $page_name = "Actualités";
 get_header();
 require 'partials/nav.php';
 require 'partials/bg.php';
+
+$act_title = get_field('act_title');
+$act_img = get_field('act_img');
+$act_desc = get_field('act_desc');
 ?>
 
     <h1 class="main_title">
@@ -14,17 +18,15 @@ require 'partials/bg.php';
             Listes des nos actualités
         </h2>
         <ul>
-            <li>
+            <li class="reveal-side">
                 <p class="act_name">
-                    <b>Récolte de dons</b>
+                    <b><?= $act_title ?></b>
                 </p>
                 <div class="act__container">
-                    <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg"
-                         alt="image montrant un homme portant une caisse">
+                    <img src="<?= $act_img['url'] ?>"
+                         alt="<?= $act_img['alt'] ?>">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aperiam, blanditiis
-                        debitis delectus doloremque eius facere harum, id inventore iure nesciunt obcaecati omnis
-                        perspiciatis quas qui recusandae rerum sapiente.
+                        <?= $act_desc ?>
                     </p>
                 </div>
             </li>

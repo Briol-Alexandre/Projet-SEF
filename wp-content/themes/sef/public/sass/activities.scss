@@ -62,3 +62,13 @@
     }
   }
 }
+
+@media (max-width: 1000px){
+    .act__container {
+        flex-direction: column;
+        gap: 2rem;
+        img{
+            margin: auto;
+        }
+    }
+}

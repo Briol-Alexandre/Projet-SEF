@@ -6,7 +6,11 @@ require('partials/bg.php');
 
 /* ACF var*/
 
-$page_title = get_field('titre_page')
+$page_title = get_field('titre_page');
+
+$act_title = get_field('act_title');
+$act_img = get_field('act_img');
+$act_desc = get_field('act_desc');
 ?>
 
 
@@ -19,7 +23,7 @@ $page_title = get_field('titre_page')
             Le moindre geste peut avoir son <b>importance</b>
         </p>
 
-        <a href="/soutenir" hreflang="fr" class="link-to-other-pages reveal">
+        <a href="/soutenir" title="Aller à la page de soutient" hreflang="fr" class="link-to-other-pages reveal">
             Soutenir
         </a>
     </section>
@@ -30,22 +34,22 @@ $page_title = get_field('titre_page')
         </h2>
         <ul class="home_act_list">
             <li class="act_item">
-                <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg'" alt="Image test" width="662"
+                <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg" alt="Image test" width="662"
                      height="485">
                 <p>Récolte dons</p>
             </li>
             <li class="act_item">
-                <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg'" alt="Image test" width="662"
+                <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg" alt="Image test" width="662"
                      height="485">
                 <p>Récolte dons</p>
             </li>
             <li class="act_item">
-                <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg'" alt="Image test" width="662"
+                <img src="../../../wp-content/themes/sef/resources/img/activities_img.svg" alt="Image test" width="662"
                      height="485">
                 <p>Récolte dons</p>
             </li>
         </ul>
-            <a href="/news" class="link-to-activities">
+            <a href="/news" title="Aller a la page contenant toutes les activités" class="link-to-activities">
                 Voir toutes les activités
             </a>
     </section>

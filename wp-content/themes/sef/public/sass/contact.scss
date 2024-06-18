@@ -4,13 +4,36 @@ h1 {
 
 .form_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: center;
+
+  .contact_info {
+    text-align: center;
+
+    h2 {
+      margin: 0 0 5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    b {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Avenir, sans-serif;
+  }
 
   .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
     padding: 5rem 0;
     width: 50%;
     font-family: Avenir, sans-serif;
@@ -35,10 +58,6 @@ h1 {
       gap: 5rem;
     }
 
-    #message {
-      width: 100%;
-    }
-
     label {
       display: block;
       text-transform: uppercase;
@@ -47,10 +66,21 @@ h1 {
 
     input {
       display: block;
-      width: 100%;
-      background-color: rgba(120, 222, 183, 0.18);
+      width: 97.8%;
+      border: 1px solid #78DEB7;
+      background-color: rgba(50, 126, 193, 0.09);
       padding: 1rem 0 1rem 1rem;
-      border: none;
+      font-family: Avenir, sans-serif;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+    }
+
+    #subject {
+      display: block;
+      background-color: rgba(50, 126, 193, 0.09);
+      width: 100%;
+      padding: 1rem 0 1rem 1rem;
+      border: 1px solid #78DEB7;
       font-family: Avenir, sans-serif;
       border-radius: 15px;
       margin-bottom: 2rem;
@@ -75,6 +105,28 @@ h1 {
       background-color: #78DEB7;
       transition: 0.25s;
     }
+  }
+}
 
+.contact_explain {
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 2rem auto 0;
+  width: 75%;
+}
+
+
+@media (max-width: 750px) {
+  .form_container {
+    flex-direction: column;
+    justify-content: center;
+
+
+    .form {
+      margin: auto;
+      width: 70%;
+    }
   }
 }

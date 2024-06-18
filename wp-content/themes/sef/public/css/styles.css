@@ -60,7 +60,7 @@ table {
   border-width: 0;
 }
 
-.reveal {
+.reveal, .reveal-side {
   opacity: 1;
   transition: 1s;
 }
@@ -68,7 +68,11 @@ table {
 .slideUp {
   opacity: 0;
   transform: translateY(100px);
-  transition: 1s;
+}
+
+.slideSide {
+  opacity: 0;
+  transform: translateX(100px);
 }
 
 .background {
@@ -154,6 +158,22 @@ table {
   color: #78DEB7;
   transition: 0.25s;
 }
+.main-nav .menu__box li a {
+  position: relative;
+}
+.main-nav .menu__box li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #78DEB7;
+  transition: 0.5s;
+}
+.main-nav .menu__box li a:hover:before {
+  width: 100%;
+  transition: 0.5s;
+}
 .main-nav .menu__box #contactButton {
   color: white;
   background-color: #78DEB7;
@@ -161,6 +181,9 @@ table {
   border-radius: 24px;
   transition: 0.25s;
   margin-left: 5rem;
+}
+.main-nav .menu__box #contactButton:before {
+  content: none;
 }
 .main-nav .menu__box #contactButton:hover {
   color: #78DEB7;
@@ -170,8 +193,8 @@ table {
 }
 .main-nav img {
   margin-left: 1rem;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
 .main-nav .burger_menu_icon {
   display: none;
@@ -352,7 +375,7 @@ table {
 .main_title b {
   color: black;
   font-style: italic;
-  background-image: url(../../../../../wp-content/themes/sef/resources/img/text-bg.svg);
+  background-image: url(../../../../../wp-content/themes/sef/resources/img/long-text-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -415,10 +438,12 @@ table {
   scale: 0.95;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   html {
     font-size: 62.5%;
   }
+}
+@media (max-width: 1000px) {
   .recent_activities .home_act_list {
     display: flex;
     flex-direction: column;
@@ -433,13 +458,31 @@ h1 {
 
 .form_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: center;
+}
+.form_container .contact_info {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Avenir, sans-serif;
+}
+.form_container .contact_info h2 {
+  margin: 0 0 5rem;
+}
+.form_container .contact_info p {
+  margin-bottom: 1rem;
+}
+.form_container .contact_info b {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 .form_container .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
   padding: 5rem 0;
   width: 50%;
   font-family: Avenir, sans-serif;
@@ -461,9 +504,6 @@ h1 {
   justify-content: center;
   gap: 5rem;
 }
-.form_container .form #message {
-  width: 100%;
-}
 .form_container .form label {
   display: block;
   text-transform: uppercase;
@@ -471,10 +511,20 @@ h1 {
 }
 .form_container .form input {
   display: block;
-  width: 100%;
-  background-color: rgba(120, 222, 183, 0.18);
+  width: 97.8%;
+  border: 1px solid #78DEB7;
+  background-color: rgba(50, 126, 193, 0.09);
   padding: 1rem 0 1rem 1rem;
-  border: none;
+  font-family: Avenir, sans-serif;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+.form_container .form #subject {
+  display: block;
+  background-color: rgba(50, 126, 193, 0.09);
+  width: 100%;
+  padding: 1rem 0 1rem 1rem;
+  border: 1px solid #78DEB7;
   font-family: Avenir, sans-serif;
   border-radius: 15px;
   margin-bottom: 2rem;
@@ -498,6 +548,25 @@ h1 {
   transition: 0.25s;
 }
 
+.contact_explain {
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 2rem auto 0;
+  width: 75%;
+}
+
+@media (max-width: 750px) {
+  .form_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form_container .form {
+    margin: auto;
+    width: 70%;
+  }
+}
 .stores__container {
   display: flex;
   flex-direction: column;
@@ -522,6 +591,12 @@ h1 {
   justify-content: space-around;
   gap: 78px;
 }
+.stores__container .store__container img {
+  border-radius: 1.5rem;
+}
+.stores__container .store__container .map__container iframe {
+  border-radius: 2rem;
+}
 .stores__container .store_name {
   font-family: "Big Caslon CC", serif;
   font-size: 3rem;
@@ -530,13 +605,9 @@ h1 {
   margin-bottom: 4rem;
 }
 .stores__container .store_name b {
-  color: black;
+  color: #327EC1;
   font-style: italic;
   text-transform: uppercase;
-  background-image: url(../../../../../wp-content/themes/sef/resources/img/text-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 .stores__container .info__container {
   display: flex;
@@ -551,7 +622,7 @@ h1 {
   margin-bottom: 1rem;
 }
 .stores__container .info__container b, .stores__container .info__container i, .stores__container .info__container p {
-  text-align: left;
+  text-align: center;
   display: block;
   font-weight: 500;
 }
@@ -561,6 +632,24 @@ h1 {
   display: block;
 }
 
+@media (max-width: 800px) {
+  .stores__container .store__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stores__container .store__container .map__container iframe {
+    width: 70%;
+    height: auto;
+  }
+  .stores__container .store__container img {
+    width: 70%;
+    height: auto;
+    margin: auto;
+  }
+  .stores__container .store__container .info__container b, .stores__container .store__container .info__container i, .stores__container .store__container .info__container p {
+    text-align: center;
+  }
+}
 .sef__container .info {
   display: flex;
   margin: 4rem auto;
@@ -639,6 +728,63 @@ h2 {
   margin-bottom: 4rem;
 }
 
+.container {
+  padding: 2rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+.slider-wrapper .slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+.slider-wrapper .slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slider-wrapper .slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slider-wrapper .slider-nav a {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+.slider-wrapper .slider-nav a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 570px) {
+  .sef__container .info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .sef__container .info img {
+    display: none;
+  }
+  .temoignages .post img {
+    width: 50px;
+    height: 50px;
+  }
+}
 .acts__container {
   display: flex;
   flex-direction: column;
@@ -696,6 +842,81 @@ h2 {
   background-size: contain;
 }
 
+@media (max-width: 1000px) {
+  .act__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .act__container img {
+    margin: auto;
+  }
+}
+.financial, .stuff {
+  margin-left: 5rem;
+  font-family: Avenir, sans-serif;
+}
+.financial p, .stuff p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-left: 0;
+}
+.financial ul, .stuff ul {
+  margin-top: 1rem;
+}
+.financial li, .stuff li {
+  list-style: inside;
+  font-weight: 700;
+}
+.financial__container, .stuff__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+.financial__container img, .stuff__container img {
+  width: 30%;
+  height: 30%;
+  border-radius: 1.25rem;
+}
+
+.donation_title {
+  font-family: "Big Caslon CC", serif;
+  font-weight: 900;
+  font-size: 3.75rem;
+  color: #327EC1;
+  text-align: left;
+}
+.donation_title b {
+  color: black;
+  font-style: italic;
+  background-image: url(../../../../../wp-content/themes/sef/resources/img/long-text-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+div.stuff__container__text {
+  width: 50%;
+}
+
+@media (max-width: 950px) {
+  .financial, .stuff {
+    margin: 0;
+  }
+  .financial__container, .stuff__container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .donation_title {
+    text-align: center;
+  }
+  div.stuff__container__text {
+    width: 70%;
+  }
+}
 footer {
   background-color: #F4F2F2;
   font-family: "Avenir", sans-serif;

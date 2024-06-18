@@ -4,7 +4,7 @@
             Navigation principale
         </h1>
         <a href="/" title="Retour à l'accueil">
-            <img src="/wp-content/themes/sef/resources/img/sef-logo.svg" alt="Logo de l'association SEF" class="logo">
+            <img src="/wp-content/themes/sef/resources/img/1x/sef-logo.png" alt="Logo de l'association SEF" class="logo">
         </a>
         <div class="hamburger-menu">
             <input type="checkbox" id="menu__toggle">
@@ -14,12 +14,11 @@
                 <span></span>
             </label>
 
-            <ul class="menu__box"></b>
+            <ul class="menu__box">
                 <li><a class="<?= urlIs('/sef/') ? 'current_page' : 'menu__item' ?> menu__item" href="/sef" title="Vers la page SEF">SEF</a></li>
                 <li><a class="<?= urlIs('/magasins/') ? 'current_page' : 'menu__item' ?> menu__item" href="/magasins" title="Vers la page des magasins">Magasins</a></li>
                 <li><a class="<?= urlIs('/news/') ? 'current_page' : 'menu__item' ?> menu__item" href="/news" title="Vers la page des actualités">Actualités</a></li>
                 <li><a class="<?= urlIs('/soutenir/') ? 'current_page' : 'menu__item' ?> menu__item" href="/soutenir" title="Vers la page de soutien">Soutenir</a></li>
-                <li><a class="<?= urlIs('/hebergement/') ? 'current_page' : 'menu__item' ?> menu__item" href="/hebergement" title="Vers la page des hébergements ">Hébergement</a></li>
                 <li><a id="contactButton" href="/contact" title="Vers la page de Contact">Contact</a></li>
             </ul>
         </div>

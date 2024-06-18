@@ -38,7 +38,7 @@
   b {
     color: black;
     font-style: italic;
-    background-image: url(../../../../../wp-content/themes/sef/resources/img/text-bg.svg);
+    background-image: url(../../../../../wp-content/themes/sef/resources/img/long-text-bg.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -109,12 +109,14 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
 
   html{
     font-size: 62.5%;
   }
+}
 
+@media (max-width: 1000px) {
   .recent_activities{
     .home_act_list {
       display: flex;
